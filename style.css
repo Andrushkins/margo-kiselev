@@ -291,6 +291,12 @@ body {
   width: 100%;
 }
 
+.small-block, .about-footer {
+  -webkit-transition: all ease-out 0.2s;
+  -moz-transition: all ease-out 0.2s;
+  -o-transition: all ease-out 0.2s;
+  transition: all ease-out 0.2s;
+}
 .group-3 .small-block {
   right: 50%;
 }
