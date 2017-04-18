@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>margo kiselev</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans+Caption" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Tenor+Sans" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Forum" rel="stylesheet">
+</head>
+<body>
+  <div id="container">
+    <div class="group-1">
+      <p class="heading-small">Съемка</p>
+      <div class="heading-large">
+        <p>НА ГРАНИ ИСКУССТВА</p>
+      </div>
+      <!-- ТЭГИ -->
+      <p class="tags">SILENT.VERVE | ПАВЕЛ КИСЕЛЁВ | ЭРИК ПАНОВ</p>
+      <!-- КОНЕЦ ТЭГОВ -->
+      <div class="group-1-content">
+        <div class="group-1-img"><img src="./images/img_1.jpeg" alt=""></div>
+        <div class="group-1-credits">
+          <p>Павел Киселёв. <br> «Новое Сообщение: Свидетель» <br>2016, смешанная техника.</p>
+        </div>
+      </div>
+    </div>
+    <div class="about">
+      <div><p style="font-family: 'Roboto', sans-serif;"><a style="color: black;" href="https://www.instagram.com/erikpanov">Эрик Панов</a> </p> <p style="font-family: 'Roboto', sans-serif; font-weight: 300;"><i>фотограф</i> </p></div>
+      <div><p style="margin-top: -15px; font-family: 'Roboto Light', sans-serif; font-weight: 300;">18 ОКТЯБРЯ</p></div>
+      <div><p style="font-family: 'Roboto', sans-serif;"><a style="color: black;" href="https://www.instagram.com/margarita_khanukaeva/">Маргарита Ханукаева</a></p>  <p style="font-family: 'Roboto', sans-serif; font-weight: 300;"><i>стилист по вопросам</i></p></div>
+    </div>
+    <!-- ВК & ФБ РЕПОСТ -->
+    <div class="social">
+      <a href="#"><div><img src="https://andrushkins.github.io/verstka/images/icons/facebook.svg" alt=""></div></a>
+      <a href="#"><div><img src="https://andrushkins.github.io/verstka/images/icons/vk.svg" alt=""></div></a>
+    </div>
+    <!-- КОНЕЦ ВК & ФБ РЕПОСТ -->
+    <p class="intro">
+      «Новое сообщение: Свидетель» - это газетная подборка, которую можно не только бесконечно читать, но и находить в ней всё новые и новые смыслы. Всё зависит от языка, которым владеет читатель и его способности видеть скрытые послания. <br>
+      Автор «Новое сообщение: Свидетель» скомпилировал двухмесячные статьи, посвящённые одним и тем же событиям, таким образом, что смог поменять местами текст и стоящий за ним образ. Знакомясь, по сути, с одним и тем же текстом каждый читатель находит в нём совершенно разные и <br>
+      бесконечно изменчивые <br>
+      смыслы.
+    </p>
+    <div class="group-2">
+      <div class="content-text">
+        <p class="author">Маргарита Ханукаева</p>
+        <p class="author-about">стилист по волосам</p>
+        <p class="author-quote">
+          - творение Павла Киселёва вдохновило меня практически мгновенно своей графичностью.
+          <br>С первого взгляда я уже знала, что буду использовать волосы как холст, а невидимки станут теми графичными линиями которые сделают
+          <br>читаемым сходство с картиной. 
+          <br>Уже в процессе создания прически я поняла, что хочу добавить крупные мазки в рисунок и для этих
+          <br>целей использовала канекалон. 
+        </p>
+      </div>
+      <div class="content-img"><img src="./images/img_2.jpeg" alt=""></div>
+    </div>
+    <div class="group-3">
+      <div class="large-block"><img src="./images/img_3.jpeg" alt=""></div>
+      <div class="small-block">
+        <div class="horizontal-line"></div>
+        <div class="vertical-line"></div>
+        <img src="./images/img_4.jpeg" alt="">
+        <div class="credits">платье: Alisa Kuzembaeva <br> сапоги: Stuart Weitzman</div>
+      </div>
+    </div>
+    <div class="group-4">
+      <div class="small-block">
+        <div class="horizontal-line"></div>
+        <img src="./images/img_5.jpeg" alt="">
+        <div class="credits">рубашка: Nebo <br> топ: Alisa Kuzembaeva</div>
+      </div>
+      <div class="large-block">
+        <div class="horizontal-line"></div>
+        <div class="vertical-line"></div>
+        <img src="./images/img_6.jpeg" alt="">
+      </div>
+    </div>
+    <div class="about-footer">
+      <p>стилист: <a href="https://www.instagram.com/mashaligay/">Маша Лигай</a>
+        <br>модель: <a href="https://www.instagram.com/seaqu/">OLSEN@MODUSVIVENDIS </a>
+        <br>ассистент фотографа: <a href="https://www.instagram.com/eugenemokrousov/">Евгений Мокроусов</a>
+        <br>идея и организация съемки: <a href="https://www.instagram.com/stoneradius/">stoneradius studio</a>
+      </p>
+    </div>
+  </div>
+  <script defer>
+    $(document).ready(function() {
+      $.fn.inView = function(){
+        var win = $(window);
+        var viewport = {
+            top : win.scrollTop(),
+            left : win.scrollLeft()
+        };
+        viewport.right = viewport.left + win.width();
+        viewport.bottom = viewport.top + win.height();
+        var bounds = this.offset();
+        bounds.right = bounds.left + this.outerWidth();
+        bounds.bottom = bounds.top + this.outerHeight();
+        return (!(viewport.right < bounds.left || viewport.left > bounds.right || viewport.bottom < bounds.top || viewport.top > bounds.bottom));
+      };
+
+      String.prototype.toNum = function(){
+        return parseInt(this, 10);
+      }
+
+      var firstPopup = $('.group-3'),
+          secondPopup = $('.group-4'),
+          firstMovObj = document.querySelector('.group-3 .small-block'),
+          firstMovObjRight = $('.group-3 .small-block').css('right').slice(0, -2).toNum(),
+          secondMovObj = document.querySelector('.group-4 .small-block'),
+          secondMovObjRight = $('.group-4 .small-block').css('left').slice(0, -2).toNum();
+
+      $(window).on('scroll', function(){
+
+        if (firstPopup.inView()) {
+          if (firstMovObjRight - ($(window).scrollTop() / 4) > 0) {
+            firstMovObj.style.right = firstMovObjRight - ($(window).scrollTop() / 4) + 'px';
+          }
+        }
+
+        if (secondPopup.inView()) {
+          if (secondMovObjRight - ($(window).scrollTop() / 6) > 0) {
+            secondMovObj.style.left = secondMovObjRight - ($(window).scrollTop() / 6) + 'px';
+          }
+        }
+      });
+    });
+  </script>
+</body>
+</html>
