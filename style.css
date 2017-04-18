@@ -16,6 +16,11 @@ body {
   margin: 0;
 }
 
+#container {
+  padding-bottom: 200px;
+  margin-top: 200px;
+}
+
 .group-1 {
   width: 100%;
   max-width: 1180px;
@@ -38,6 +43,23 @@ body {
   margin-bottom: 5px;
   position: relative;
   padding: 55px 0 30px;
+}
+
+.line-left-to-right {
+  max-width: 340px;
+  width: 100%;
+  margin-left: 0;
+  height: 2px;
+  background-color: grey;
+  margin-bottom: 15px;
+}
+
+.line-right-to-left {
+  max-width: 340px;
+  width: 100%;
+  margin-left: auto;
+  height: 2px;
+  background-color: grey;
 }
 
 .heading-large p {
@@ -327,12 +349,13 @@ body {
 
 .credits {
   position: absolute;
-  bottom: 5px;
+  bottom: 255px;
   font-family: 'Tenor Sans', sans-serif;
   font-size: 14px;
   line-height: 24px;
   border-left: 2px solid grey;
   padding: 35px 0 35px 20px;
+  z-index: -2;
 }
 
 .group-4 {
@@ -344,7 +367,7 @@ body {
 
 .group-4 .small-block {
   padding: 70px 0 0 0;
-  margin-top: 120px;
+  margin-top: 160px;
   left: 50%;
 }
 

@@ -15,7 +15,9 @@
     <div class="group-1">
       <p class="heading-small">Съемка</p>
       <div class="heading-large">
+        <div class="line-left-to-right"></div>
         <p>НА ГРАНИ ИСКУССТВА</p>
+        <div class="line-right-to-left"></div>
       </div>
       <!-- ТЭГИ -->
       <p class="tags">SILENT.VERVE | ПАВЕЛ КИСЕЛЁВ | ЭРИК ПАНОВ</p>
@@ -86,6 +88,12 @@
         <br>идея и организация съемки: <a href="https://www.instagram.com/stoneradius/">stoneradius studio</a>
       </p>
     </div>
+    <!-- ВК & ФБ РЕПОСТ -->
+    <div class="social">
+      <a href="#"><div><img src="https://andrushkins.github.io/verstka/images/icons/facebook.svg" alt=""></div></a>
+      <a href="#"><div><img src="https://andrushkins.github.io/verstka/images/icons/vk.svg" alt=""></div></a>
+    </div>
+    <!-- КОНЕЦ ВК & ФБ РЕПОСТ -->
   </div>
   <script defer>
     $(document).ready(function() {
@@ -112,19 +120,41 @@
           firstMovObj = document.querySelector('.group-3 .small-block'),
           firstMovObjRight = $('.group-3 .small-block').css('right').slice(0, -2).toNum(),
           secondMovObj = document.querySelector('.group-4 .small-block'),
-          secondMovObjRight = $('.group-4 .small-block').css('left').slice(0, -2).toNum();
+          secondMovObjRight = $('.group-4 .small-block').css('left').slice(0, -2).toNum(),
+          lineToLeft = $('.line-right-to-left').css('margin-left').slice(0, -2).toNum();
+
+      $('body').bind('mousewheel DOMMouseScroll scroll', function(event) {
+        // console.log(event, 'ha');
+      })
 
       $(window).on('scroll', function(){
 
+        if (lineToLeft - $(window).scrollTop()*4 > 0) {
+          document.querySelector('.line-left-to-right').style.marginLeft = $(window).scrollTop()*4 + 'px';
+          document.querySelector('.line-right-to-left').style.marginLeft = lineToLeft - $(window).scrollTop()*4 + 'px';
+        }
+
         if (firstPopup.inView()) {
-          if (firstMovObjRight - ($(window).scrollTop() / 4) > 0) {
-            firstMovObj.style.right = firstMovObjRight - ($(window).scrollTop() / 4) + 'px';
+          if (firstMovObjRight - ($(window).scrollTop() / 4.8) > 0) {
+            firstMovObj.style.right = firstMovObjRight - ($(window).scrollTop() / 4.8) + 'px';
+          }
+          if (firstMovObjRight - ($(window).scrollTop() / 5) > 0) {
+            document.querySelectorAll('.credits')[0].style.bottom = firstMovObjRight - ($(window).scrollTop() / 5) + 'px';
           }
         }
 
         if (secondPopup.inView()) {
-          if (secondMovObjRight - ($(window).scrollTop() / 6) > 0) {
-            secondMovObj.style.left = secondMovObjRight - ($(window).scrollTop() / 6) + 'px';
+          if (secondMovObjRight - ($(window).scrollTop() / 6.8) > 0) {
+            secondMovObj.style.left = secondMovObjRight - ($(window).scrollTop() / 6.8) + 'px';
+          }
+          if (firstMovObjRight - ($(window).scrollTop() / 7.5) > 0) {
+            document.querySelectorAll('.credits')[1].style.bottom = firstMovObjRight - ($(window).scrollTop() / 7.5) + 'px';
+          }
+        }
+        if ($('.about-footer').inView()) {
+          // console.log((-800 + $(window).scrollTop() / 6))
+          if ((-800 + $(window).scrollTop() / 5.3) < 0) {
+            document.querySelector('.about-footer').style.marginTop = (-800 + $(window).scrollTop() / 5.3) + 'px';
           }
         }
       });
