@@ -291,7 +291,7 @@ body {
   width: 100%;
 }
 
-.small-block, .about-footer {
+.small-block, .about-footer, .credits, .line-left-to-right, .line-right-to-left {
   -webkit-transition: all ease-out 0.2s;
   -moz-transition: all ease-out 0.2s;
   -o-transition: all ease-out 0.2s;

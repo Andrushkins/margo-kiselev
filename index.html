@@ -129,17 +129,17 @@
 
       $(window).on('scroll', function(){
 
-        if (lineToLeft - $(window).scrollTop()*4 > 0) {
-          document.querySelector('.line-left-to-right').style.marginLeft = $(window).scrollTop()*4 + 'px';
-          document.querySelector('.line-right-to-left').style.marginLeft = lineToLeft - $(window).scrollTop()*4 + 'px';
+        if (lineToLeft - $(window).scrollTop()*2 > 0) {
+          document.querySelector('.line-left-to-right').style.marginLeft = $(window).scrollTop()*2 + 'px';
+          document.querySelector('.line-right-to-left').style.marginLeft = lineToLeft - $(window).scrollTop()*2 + 'px';
         }
 
         if (firstPopup.inView()) {
           if (firstMovObjRight - ($(window).scrollTop() / 4.8) > 0) {
             firstMovObj.style.right = firstMovObjRight - ($(window).scrollTop() / 4.8) + 'px';
           }
-          if (firstMovObjRight - ($(window).scrollTop() / 5) > 0) {
-            document.querySelectorAll('.credits')[0].style.bottom = firstMovObjRight - ($(window).scrollTop() / 5) + 'px';
+          if (-(firstMovObjRight+120) + ($(window).scrollTop() / 4) < 0) {
+            document.querySelectorAll('.credits')[0].style.bottom = -(firstMovObjRight+120) + ($(window).scrollTop() / 4) + 'px';
           }
         }
 
@@ -147,8 +147,8 @@
           if (secondMovObjRight - ($(window).scrollTop() / 6.8) > 0) {
             secondMovObj.style.left = secondMovObjRight - ($(window).scrollTop() / 6.8) + 'px';
           }
-          if (firstMovObjRight - ($(window).scrollTop() / 7.5) > 0) {
-            document.querySelectorAll('.credits')[1].style.bottom = firstMovObjRight - ($(window).scrollTop() / 7.5) + 'px';
+          if (-(firstMovObjRight+60) + ($(window).scrollTop() / 6) < 40) {
+            document.querySelectorAll('.credits')[1].style.bottom = -(firstMovObjRight+60) + ($(window).scrollTop() / 6) + 'px';
           }
         }
         if ($('.about-footer').inView()) {
@@ -157,6 +157,7 @@
             document.querySelector('.about-footer').style.marginTop = (-800 + $(window).scrollTop() / 5.3) + 'px';
           }
         }
+
       });
     });
   </script>
