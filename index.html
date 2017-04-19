@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <title>margo kiselev</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <link rel="stylesheet" href="style.css">
@@ -124,30 +125,32 @@
           lineToLeft = $('.line-right-to-left').css('margin-left').slice(0, -2).toNum();
 
       function animation() {
-        if (lineToLeft - $(window).scrollTop()*2 > 0) {
-          document.querySelector('.line-left-to-right').style.marginLeft = $(window).scrollTop()*2 + 'px';
-          document.querySelector('.line-right-to-left').style.marginLeft = lineToLeft - $(window).scrollTop()*2 + 'px';
-        }
-        if (firstPopup.inView()) {
-          if (firstMovObjRight - ($(window).scrollTop() / 4.8) > 0) {
-            firstMovObj.style.right = firstMovObjRight - ($(window).scrollTop() / 4.8) + 'px';
+        if (window.innerWidth > 425) {
+          if (lineToLeft - $(window).scrollTop()*2 > 0) {
+            document.querySelector('.line-left-to-right').style.marginLeft = $(window).scrollTop()*2 + 'px';
+            document.querySelector('.line-right-to-left').style.marginLeft = lineToLeft - $(window).scrollTop()*2 + 'px';
           }
-          if (-(firstMovObjRight+120) + ($(window).scrollTop() / 3.8) < 30) {
-            document.querySelectorAll('.credits')[0].style.bottom = -(firstMovObjRight+120) + ($(window).scrollTop() / 3.8) + 'px';
+          if (firstPopup.inView()) {
+            if (firstMovObjRight - ($(window).scrollTop() / 4.8) > 0) {
+              firstMovObj.style.right = firstMovObjRight - ($(window).scrollTop() / 4.8) + 'px';
+            }
+            if (-(firstMovObjRight+120) + ($(window).scrollTop() / 3.8) < 30) {
+              document.querySelectorAll('.credits')[0].style.bottom = -(firstMovObjRight+120) + ($(window).scrollTop() / 3.8) + 'px';
+            }
           }
-        }
 
-        if (secondPopup.inView()) {
-          if (secondMovObjRight - ($(window).scrollTop() / 6.8) > 0) {
-            secondMovObj.style.left = secondMovObjRight - ($(window).scrollTop() / 6.8) + 'px';
+          if (secondPopup.inView()) {
+            if (secondMovObjRight - ($(window).scrollTop() / 6.8) > 0) {
+              secondMovObj.style.left = secondMovObjRight - ($(window).scrollTop() / 6.8) + 'px';
+            }
+            if (-(firstMovObjRight+60) + ($(window).scrollTop() / 6) < 40) {
+              document.querySelectorAll('.credits')[1].style.bottom = -(firstMovObjRight+60) + ($(window).scrollTop() / 6) + 'px';
+            }
           }
-          if (-(firstMovObjRight+60) + ($(window).scrollTop() / 6) < 40) {
-            document.querySelectorAll('.credits')[1].style.bottom = -(firstMovObjRight+60) + ($(window).scrollTop() / 6) + 'px';
-          }
-        }
-        if ($('.about-footer').inView()) {
-          if ((-800 + $(window).scrollTop() / 5.3) < 0) {
-            document.querySelector('.about-footer').style.marginTop = (-800 + $(window).scrollTop() / 5.3) + 'px';
+          if ($('.about-footer').inView()) {
+            if ((-800 + $(window).scrollTop() / 5.3) < 0) {
+              document.querySelector('.about-footer').style.marginTop = (-800 + $(window).scrollTop() / 5.3) + 'px';
+            }
           }
         }
       };

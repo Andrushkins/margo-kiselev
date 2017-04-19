@@ -446,6 +446,10 @@ body {
   #container {
     width: 90%;
     margin: 0 auto;
+    padding-top: 200px;
+  }
+  .line-left-to-right, .line-right-to-left {
+    display: none;
   }
   .about {
     margin-top: 20px;
@@ -455,9 +459,13 @@ body {
   }
   .heading-large {
     font-size: 43px;
-    margin-bottom: 60px;
-    margin-top: 60px;
+    margin-bottom: 30px;
+    margin-top: 30px;
     padding: 50px 0 30px;
+    /*background: url('./images/img_1.jpeg');
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: 100%;*/
   }
   .tags {
     font-size: 14px;
@@ -468,8 +476,95 @@ body {
     height: 100%;
     padding-top: 0;
   }
+  .group-1-content {
+    display: block;
+    margin-top: 30px;
+  }
+  .group-1-img {
+    width: 100%;
+  }
+  .group-1-credits {
+    margin-top: 30px;
+    width: 100%;
+    margin-left: 0;
+  }
   .social {
     margin: 40px 0 40px 0;
+  }
+  .intro {
+    text-align: left;
+    font-size: 22px;
+    line-height: 26px;
+    margin-bottom: 30px;
+  }
+  .group-2 {
+    display: block;
+    margin: 0 auto 30px auto;
+  }
+  .content-text {
+    width: 100%;
+    text-align: left;
+    margin-right: 0;
+    margin-bottom: 0;
+    border-right: none;
+  }
+  .content-text::before, .content-text::after {
+    display: none;
+  }
+  .author {
+    margin-top: 0;
+    font-size: 26px;
+  }
+  .author-about {
+    margin: 0 0 20px 0;
+    font-size: 20px;
+    font-size: 16px;
+    line-height: 26px;
+  }
+  .content-img {
+    margin-top: 20px;
+    width: 100%;
+  }
+  .group-3 {
+    display: block;
+    margin-bottom: 30px;
+  }
+  .large-block {
+    width: 100%;
+  }
+  .small-block {
+    padding: 0;
+    margin-top: 20px;
+    right: auto !important;
+  }
+  .horizontal-line, .vertical-line {
+    display: none;
+  }
+  .credits {
+    position: static;
+    margin-top: 20px;
+  }
+  .group-4 {
+    display: block;
+    margin: 0 auto 30px auto;
+  }
+  .group-4 .small-block {
+    width: 100%;
+    left: auto;
+    padding: 0;
+    margin-top: 0;
+  }
+  .group-4 .large-block {
+    width: 100%;
+    left: auto;
+    padding: 0;
+    margin-top: 20px;
+    margin-left: 0;
+  }
+  .about-footer p {
+    text-align: left;
+    border-right: none;
+    padding-right: 0;
   }
 }
 /*END MEDIA QUERIES*/
