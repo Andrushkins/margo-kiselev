@@ -123,16 +123,11 @@
           secondMovObjRight = $('.group-4 .small-block').css('left').slice(0, -2).toNum(),
           lineToLeft = $('.line-right-to-left').css('margin-left').slice(0, -2).toNum();
 
-      $('body').bind('mousewheel DOMMouseScroll scroll', function(event) {
-        // console.log(event, 'ha');
-      })
-
       function animation() {
         if (lineToLeft - $(window).scrollTop()*2 > 0) {
           document.querySelector('.line-left-to-right').style.marginLeft = $(window).scrollTop()*2 + 'px';
           document.querySelector('.line-right-to-left').style.marginLeft = lineToLeft - $(window).scrollTop()*2 + 'px';
         }
-
         if (firstPopup.inView()) {
           if (firstMovObjRight - ($(window).scrollTop() / 4.8) > 0) {
             firstMovObj.style.right = firstMovObjRight - ($(window).scrollTop() / 4.8) + 'px';
@@ -151,14 +146,19 @@
           }
         }
         if ($('.about-footer').inView()) {
-          // console.log((-800 + $(window).scrollTop() / 6))
           if ((-800 + $(window).scrollTop() / 5.3) < 0) {
             document.querySelector('.about-footer').style.marginTop = (-800 + $(window).scrollTop() / 5.3) + 'px';
           }
         }
       };
 
-      $(window).on('scroll', function(){
+      (function() {
+        var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
+                                    window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+        window.requestAnimationFrame = requestAnimationFrame;
+      })();
+
+      $(window).on('mousewheel DOMMouseScroll scroll', function(){
         requestAnimationFrame(animation);
       });
     });
