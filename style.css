@@ -94,6 +94,10 @@ body {
 }
 
 .group-1-content {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -141,6 +145,10 @@ body {
 }
 
 .about {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -163,6 +171,10 @@ body {
 }
 
 .social {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -204,6 +216,10 @@ body {
 }
 
 .group-2 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   justify-content: center;
   width: 100%;
@@ -275,6 +291,10 @@ body {
 }
 
 .group-3 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   margin: 0 auto 100px auto;
   max-width: 1180px;
@@ -369,6 +389,10 @@ body {
 }
 
 .group-4 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   margin: 0 auto 50px auto;
   max-width: 1180px;
@@ -498,12 +522,20 @@ body {
     margin-bottom: 30px;
   }
   .group-2 {
-    display: block;
+    -webkit-flex-flow: row wrap;
+    justify-content: space-around;
     margin: 0 auto 30px auto;
+  }
+  .group-2 .content-text {
+    order: 2;
+  }
+  .group-2 .content-img {
+    order: 1;
   }
   .content-text {
     width: 100%;
     text-align: left;
+    padding-right: 0;
     margin-right: 0;
     margin-bottom: 0;
     border-right: none;
@@ -521,8 +553,14 @@ body {
     font-size: 16px;
     line-height: 26px;
   }
+  .author-quote {
+    font-size: 20px;
+    line-height: 26px;
+    margin-bottom: 0;
+  }
   .content-img {
-    margin-top: 20px;
+    margin-top: 0;
+    margin-bottom: 20px;
     width: 100%;
   }
   .group-3 {
