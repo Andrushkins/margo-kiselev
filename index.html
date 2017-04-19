@@ -127,8 +127,7 @@
         // console.log(event, 'ha');
       })
 
-      $(window).on('scroll', function(){
-
+      function animation() {
         if (lineToLeft - $(window).scrollTop()*2 > 0) {
           document.querySelector('.line-left-to-right').style.marginLeft = $(window).scrollTop()*2 + 'px';
           document.querySelector('.line-right-to-left').style.marginLeft = lineToLeft - $(window).scrollTop()*2 + 'px';
@@ -157,7 +156,10 @@
             document.querySelector('.about-footer').style.marginTop = (-800 + $(window).scrollTop() / 5.3) + 'px';
           }
         }
+      };
 
+      $(window).on('scroll', function(){
+        requestAnimationFrame(animation);
       });
     });
   </script>
