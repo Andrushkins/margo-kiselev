@@ -66,7 +66,7 @@
       <div class="small-block">
         <div class="horizontal-line"></div>
         <div class="vertical-line"></div>
-        <img src="./images/img_4.jpg" alt="">
+        <img src="./images/img_4.jpg" alt="" style="max-width: 400px;">
         <div class="credits">платье: Alisa Kuzembaeva <br> сапоги: Stuart Weitzman</div>
       </div>
     </div>
@@ -121,7 +121,7 @@
           firstMovObj = document.querySelector('.group-3 .small-block'),
           firstMovObjRight = $('.group-3 .small-block').css('right').slice(0, -2).toNum(),
           secondMovObj = document.querySelector('.group-4 .small-block'),
-          secondMovObjRight = $('.group-4 .small-block').css('left').slice(0, -2).toNum(),
+          secondMovObjLeft = $('.group-4 .small-block').css('left').slice(0, -2).toNum(),
           lineToLeft = $('.line-right-to-left').css('margin-left').slice(0, -2).toNum();
 
       function animation() {
@@ -140,8 +140,8 @@
           }
 
           if (secondPopup.inView()) {
-            if (secondMovObjRight - ($(window).scrollTop() / 6.8) > 0) {
-              secondMovObj.style.left = secondMovObjRight - ($(window).scrollTop() / 6.8) + 'px';
+            if (secondMovObjLeft - ($(window).scrollTop() / 6.8) > 0) {
+              secondMovObj.style.left = secondMovObjLeft - ($(window).scrollTop() / 6.8) + 'px';
             }
             if (-(firstMovObjRight+60) + ($(window).scrollTop() / 6) < 40) {
               document.querySelectorAll('.credits')[1].style.bottom = -(firstMovObjRight+60) + ($(window).scrollTop() / 6) + 'px';
